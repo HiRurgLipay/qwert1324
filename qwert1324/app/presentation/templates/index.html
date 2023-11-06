@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Form</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='main.js', _external=True) }}"></script>
+</head>
+<body>
+    <form id="my-form" method="post" action="{{ url_for('presentation.submit') }}">
+        <div id="form-container">
+            <input type="text" name="name"><br>
+        </div>
+        <button type="button" id="add-btn">Add Input</button>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
